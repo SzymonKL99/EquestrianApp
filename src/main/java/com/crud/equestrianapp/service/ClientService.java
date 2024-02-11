@@ -34,7 +34,7 @@ public class ClientService {
         return clientOptional.get();
     }
 
-    public List<Client> getAllClient() throws ClientNotFoundException {
+    public List<Client> getAllClients() throws ClientNotFoundException {
         return clientRepository.findAll();
     }
 
