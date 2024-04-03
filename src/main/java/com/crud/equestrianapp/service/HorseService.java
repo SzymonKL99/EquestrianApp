@@ -44,6 +44,9 @@ public class HorseService {
             throw new HorseNotFoundException("Horse with id " + horse.getId() + " not found");
         }
 
+        Horse updatedHorse = optionalUpdatedHorse.get();
+        horse.setAssignedLessons(updatedHorse.getAssignedLessons());
+
         return horseRepository.save(horse);
     }
 

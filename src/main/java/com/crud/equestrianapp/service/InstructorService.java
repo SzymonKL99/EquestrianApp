@@ -44,6 +44,9 @@ public class InstructorService {
             throw new InstructorNotFoundException("Instructor with id " + instructor.getId() + " not found");
         }
 
+        Instructor updatedInstructor = optionalUpdatedInstructor.get();
+        instructor.setAssignedLessons(updatedInstructor.getAssignedLessons());
+
         return instructorRepository.save(instructor);
     }
 
